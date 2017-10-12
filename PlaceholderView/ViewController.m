@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "UIView+placeholder.h"
+#import "SecondViewController.h"
 
 @interface ViewController ()
 
@@ -17,6 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.view cq_showPlaceholderWithType:CQPlaceholderViewTypeNoData reloadBlock:^{
+        SecondViewController *secondVC = [[SecondViewController alloc] init];
+        [self presentViewController:secondVC animated:YES completion:nil];
+    }];
 }
 
 

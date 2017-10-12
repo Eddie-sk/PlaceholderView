@@ -16,6 +16,7 @@
 		B1F2D9D11F8F65950096DEAE /* PlaceholderViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F2D9D01F8F65950096DEAE /* PlaceholderViewTests.m */; };
 		B1F2D9DC1F8F65950096DEAE /* PlaceholderViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F2D9DB1F8F65950096DEAE /* PlaceholderViewUITests.m */; };
 		B1F2D9EB1F8F65CA0096DEAE /* UIView+placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F2D9EA1F8F65CA0096DEAE /* UIView+placeholder.m */; };
+		B1F2D9EE1F8F73620096DEAE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F2D9ED1F8F73620096DEAE /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		B1F2D9DD1F8F65950096DEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1F2D9E91F8F65CA0096DEAE /* UIView+placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+placeholder.h"; sourceTree = "<group>"; };
 		B1F2D9EA1F8F65CA0096DEAE /* UIView+placeholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+placeholder.m"; sourceTree = "<group>"; };
+		B1F2D9EC1F8F73620096DEAE /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		B1F2D9ED1F8F73620096DEAE /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				B1F2D9BB1F8F65950096DEAE /* ViewController.m */,
 				B1F2D9E91F8F65CA0096DEAE /* UIView+placeholder.h */,
 				B1F2D9EA1F8F65CA0096DEAE /* UIView+placeholder.m */,
+				B1F2D9EC1F8F73620096DEAE /* SecondViewController.h */,
+				B1F2D9ED1F8F73620096DEAE /* SecondViewController.m */,
 				B1F2D9BD1F8F65950096DEAE /* Main.storyboard */,
 				B1F2D9C01F8F65950096DEAE /* Assets.xcassets */,
 				B1F2D9C21F8F65950096DEAE /* LaunchScreen.storyboard */,
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F2D9EE1F8F73620096DEAE /* SecondViewController.m in Sources */,
 				B1F2D9BC1F8F65950096DEAE /* ViewController.m in Sources */,
 				B1F2D9C71F8F65950096DEAE /* main.m in Sources */,
 				B1F2D9EB1F8F65CA0096DEAE /* UIView+placeholder.m in Sources */,

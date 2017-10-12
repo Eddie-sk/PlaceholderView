@@ -60,13 +60,13 @@ static void *scrollEnableKey = &scrollEnableKey;
     imageView.backgroundColor = [UIColor redColor];
     
     UILabel *descLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(imageView.frame) + 20, CGRectGetWidth(self.frame), 15)];
+    descLabel.textAlignment = NSTextAlignmentCenter;
     descLabel.backgroundColor = [UIColor redColor];
     [self.cq_placeholderView addSubview:descLabel];
     
     UIButton *reloadButton = [[UIButton alloc] initWithFrame:CGRectMake((CGRectGetWidth(self.frame) - 120) / 2.0f, CGRectGetMaxY(descLabel.frame) + 20, 120, 35)];
     [reloadButton setTitle:@"重新加载" forState:UIControlStateNormal];
-    reloadButton.layer.borderWidth = 1.0f;
-    reloadButton.layer.borderColor = [UIColor blackColor].CGColor;
+    [reloadButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [reloadButton addTarget:self action:@selector(cq_reloadButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.cq_placeholderView addSubview:reloadButton];
     
@@ -79,7 +79,9 @@ static void *scrollEnableKey = &scrollEnableKey;
             break;
             
         case CQPlaceholderViewTypeNoData: {
-            
+            NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"noData" ofType:@"pdf"];
+            imageView.image = [UIImage imageWithContentsOfFile:imagePath];
+            descLabel.text = @"暂无数据";
         }
             break;
             
