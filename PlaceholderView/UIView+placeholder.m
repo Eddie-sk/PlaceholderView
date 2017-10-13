@@ -9,6 +9,7 @@
 #import "UIView+placeholder.h"
 #import <objc/runtime.h>
 
+
 @implementation UIView (placeholder)
 
 static void *holderViewKey = &holderViewKey;
@@ -41,6 +42,10 @@ static void *scrollEnableKey = &scrollEnableKey;
 
 - (void)cq_showPlaceholderWithType:(CQPlaceholderViewType)type reloadBlock:(PlaceholderReloadBlock)block {
     
+    if ([self isKindOfClass:[UIScrollView class]]) {
+        BOOL scrollEnable = ((UIScrollView *)self).scrollEnabled;
+        self.cq_scrollEnabled = @(scrollEnable);
+    }
     
     if (self.cq_placeholderView) {
         [self.cq_placeholderView removeFromSuperview];
@@ -97,6 +102,11 @@ static void *scrollEnableKey = &scrollEnableKey;
     
     [self.cq_placeholderView removeFromSuperview];
     self.cq_placeholderView = nil;
+    
+    if ([self isKindOfClass:[UIScrollView class]]) {
+        BOOL scrollEnable = self.cq_scrollEnabled.boolValue;
+        ((UIScrollView *)self).scrollEnabled = scrollEnable;
+    }
 }
 
 @end
